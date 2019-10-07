@@ -12,21 +12,25 @@ var click = true;
 for (let i = 0; i < 7; i++){
     var trElement = document.createElement("tr");
     tableElement.appendChild(trElement);
+    
 
     for (let j = 0; j < 7; j++){
-        var tdElement = document.createElement("td");
-        trElement.appendChild(tdElement);
+        var tdElement1 = document.createElement("td");
+        trElement.appendChild(tdElement1);
 
-        tdElement.id = i + ","+ j;       
+        tdElement1.id = i + ","+ j; 
+
+
+       
 
         if (i == 0){
-            tdElement.addEventListener("click", function(){
+            tdElement1.addEventListener("click", function(){
                 var pionElement = document.createElement("div");
 
                 var line = 6;
 
                 var divElement = document.getElementById(line + ","+ j);
-
+                
 
                 while (divElement.innerHTML != "" && line > 0){
                     var divElement = document.getElementById(line + ","+ j);
@@ -36,15 +40,47 @@ for (let i = 0; i < 7; i++){
                     divElement.appendChild(pionElement);
                     if (click == true){
                         pionElement.className = "pion1";
+                        pionElement.innerHTML="!";
+                       
+
                         click = false;
+                        
+
+                        
+                        
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
                     }
                     else{
                         pionElement.className = "pion2";
+                        pionElement.innerHTML="*";
+                    
+
                         click = true;
                     }
                 }
+
+                
+                
+
+
             })
         }
     }
 
 }
+
+
+
