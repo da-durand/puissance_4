@@ -1,0 +1,27 @@
+table{
+    margin: auto;
+}
+
+td{
+    width: 50px;
+    height: 50px;
+    border: 1px black solid;
+}
+
+.pion1{
+    background-color: red;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.pion2{
+    background-color: blue;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+tr:first-child{
+    background-color: brown;
+}
